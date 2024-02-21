@@ -28,10 +28,6 @@ Which allows to run CamelJBang with `camel` as shown below.
 
 Follow the instructions at https://github.com/oscerd/cloud-ready-kamelets[Alpine Linux (asciidoctor)] in iac/azure/servicebus
 
-=== Setup credentials
-
-In the `application.properties` add the correct accessKey, accountName and containerName for the Azure Storage Blob account.
-
 === How to run the producer
 
 Then you can run this producer example using:
@@ -50,7 +46,4 @@ Then you can run this consumer example using:
 $ jbang -Dcamel.jbang.version=4.5.0-SNAPSHOT camel run azure-servicebus-to-log.yaml
 ----
 
-=== Verify the sink worked
-
-After a while you should find different files with different name and date. Each of these file will contain two entries (one every 30 seconds).
 
