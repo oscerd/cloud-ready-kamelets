@@ -1,0 +1,36 @@
+== Create your infrastructure
+
+Through this module you'll be to create the needed bits for interacting with Azure Servicebus
+
+=== Terraform steps
+
+First of all init terraform
+
+[source,sh]
+----
+$ terraform init
+----
+
+Then run the command to apply your configuration to your Azure account
+
+[source,sh]
+----
+$ terraform apply -var="services_bus_namespace_name=<namespace_name>" -var="resource_group_name=<resource_name>" -var="location=<location>" -var="messages_queue_name=<queue_name>" -out tfout.log
+----
+
+Correctly populating the various field for your needs
+
+Once the process will complete you'll get a sensitive output for the primary connection String
+
+You're now able to read the sensitive data with
+
+[source,sh]
+----
+terraform output --raw messages_queue_name
+----
+
+This string should be used in the application.properties of the servicebus kamelets example
+
+
+
+
