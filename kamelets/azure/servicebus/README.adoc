@@ -34,7 +34,7 @@ Then you can run this producer example using:
 
 [source,sh]
 ----
-$ jbang -Dcamel.jbang.version=4.5.0-SNAPSHOT camel run timer-to-azure-servicebus.yaml
+$ jbang camel run timer-to-azure-servicebus.yaml
 ----
 
 === How to run the consumer
@@ -43,7 +43,7 @@ Then you can run this consumer example using:
 
 [source,sh]
 ----
-$ jbang -Dcamel.jbang.version=4.5.0-SNAPSHOT camel run azure-servicebus-to-log.yaml
+$ jbang camel run azure-servicebus-to-log.yaml
 ----
 
 
