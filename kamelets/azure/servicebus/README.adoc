@@ -26,7 +26,7 @@ Which allows to run CamelJBang with `camel` as shown below.
 
 === Setting up enviroment
 
-Follow the instructions at https://github.com/oscerd/cloud-ready-kamelets[Alpine Linux (asciidoctor)] in iac/azure/servicebus
+Follow the instructions at https://github.com/oscerd/cloud-ready-kamelets/tree/main/iac/azure/servicebus[Azure Servicebus IaC] in iac/azure/servicebus
 
 === How to run the producer
 
