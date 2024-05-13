@@ -1,0 +1,36 @@
+== Create your infrastructure
+
+Through this module you'll be to create the needed bits for interacting with Azure Storage Blob
+
+=== Terraform steps
+
+First of all init terraform
+
+[source,sh]
+----
+$ terraform init
+----
+
+Then run the command to apply your configuration to your Azure account
+
+[source,sh]
+----
+$ terraform apply -var="azure_storage_blob_resource_group=<resource_group_name>" -var="azure_storage_blob_account_name=<account_name>" -var="location=<location>" -var="azure_storage_blob_container_name=<container_name>" 
+----
+
+Correctly populating the various field for your needs
+
+Once the process will complete you'll get a sensitive output for the primary connection String
+
+You're now able to read the sensitive data with
+
+[source,sh]
+----
+$ terraform output --raw azure_storage_blob_account
+----
+
+This string should be used in the application.properties of the azure storage blob kamelets example together with the accountName and containerName selected
+
+
+
+
